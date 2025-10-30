@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border-radius: 100%;
+    transition-duration: .8s;
+animation: move 4s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle:hover{
+    background-color: white;
+
+}
+
+@keyframes move {
+    0%, 100% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100vw - 150px);
+    }
+    50% {
+        top: calc(100vh - 150px);
+        left: calc(100vw - 150px);
+    }
+    75% {
+        top: calc(100vh - 150px);
+        left: 0;
+    }
+}
+
+.bar {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(205, 204, 204);
+}
+
+.loading {
+    height: 100%;
+    width: 0;
+    background: green;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
